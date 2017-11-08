@@ -19,5 +19,8 @@ from collection import views
 
 urlpatterns = [
     url(r'^$', views.index, name='home'),
+    # The new URL entries we're adding:
+    url(r'^about/$',TemplateView.as_view(template_name='about.html'),name='about'),
+    url(r'^contact/$', TemplateView.as_view(template_name='contact.html'),name='contact'),
     url(r'^admin/', admin.site.urls),
 ]
