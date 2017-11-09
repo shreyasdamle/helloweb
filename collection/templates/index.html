@@ -5,15 +5,8 @@
 {% endblock title %}
 
 {% block content %}
-    <h1>Hello World!</h1>
-    <p>This is my first Django project.</p>
-
-    <p>Current BTC Value!
-      {% if number == 7478.24 %}
-        {{ number }}
-      {% else %}
-        False
-      {% endif %}
-    </p>
-    <p>Cryptocurrency: {{ thing }}</p>
+  {% for Cryptocurrency in Cryptocurrencys %}
+  <h2>{{ Cryptocurrency.name }}</h2>
+  <p>{{ Cryptocurrency.description }}</p>
+  {% endfor %}
 {% endblock content %}

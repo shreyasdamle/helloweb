@@ -1,12 +1,10 @@
 from django.shortcuts import render
+from collection.models import Cryptocurrency
 
 # Create your views here.
 def index(request):
-    # defining the variable
-    number = 7478.24
-    # passing the variable to the view
-    thing = "Bitcoin"
+    Cryptocurrencys = Cryptocurrency.objects.all()
+
     return render(request, 'index.html', {
-        'number': number,
-        'thing': thing,
+        'Cryptocurrencys': Cryptocurrencys,
     })
