@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{% block title %}
+    {{ cryptocurrency.name }} - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+  <h1>{{ cryptocurrency.name }}</h1>
+  <p>{{ cryptocurrency.description }}</p>
+{% endblock content %}

@@ -23,5 +23,7 @@ urlpatterns = [
     # The new URL entries we're adding:
     url(r'^about/$',TemplateView.as_view(template_name='about.html'),name='about'),
     url(r'^contact/$', TemplateView.as_view(template_name='contact.html'),name='contact'),
+    url(r'^cryptocurrencys/(?P<slug>[-\w]+)/$', views.cryptocurrency_detail,
+        name='cryptocurrency_detail'),
     url(r'^admin/', admin.site.urls),
 ]

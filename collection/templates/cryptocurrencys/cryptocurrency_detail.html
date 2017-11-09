@@ -5,12 +5,6 @@
 {% endblock title %}
 
 {% block content %}
-{% for cryptocurrency in cryptocurrencys %}
-  <h2>
-      <a href="{% url 'cryptocurrency_detail' slug=cryptocurrency.slug %}">
-          {{ cryptocurrency.name }}
-      </a>
-  </h2>
+  <h1>{{ cryptocurrency.name }}</h1>
   <p>{{ cryptocurrency.description }}</p>
-  {% endfor %}
 {% endblock content %}
