@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
-from collection.forms import CryptocurrencyForm
 from collection.models import Cryptocurrency
+from collection.forms import CryptocurrencyForm
+
 
 
 # Create your views here.
