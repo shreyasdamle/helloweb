@@ -25,5 +25,7 @@ urlpatterns = [
     url(r'^contact/$', TemplateView.as_view(template_name='contact.html'),name='contact'),
     url(r'^cryptocurrencys/(?P<slug>[-\w]+)/$', views.cryptocurrency_detail,
         name='cryptocurrency_detail'),
+    # new line we're adding!
+    url(r'^cryptocurrencys/(?P<slug>[-\w]+)/edit/$', views.edit_cryptocurrency,name='edit_cryptocurrency'),
     url(r'^admin/', admin.site.urls),
 ]

@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-{% load humanize %}
 {% block title %}
     {{ cryptocurrency.name }} - {{ block.super }}
 {% endblock title %}
@@ -7,4 +6,5 @@
 {% block content %}
   <h1>{{ cryptocurrency.name }}</h1>
   <p>{{ cryptocurrency.description }}</p>
+  <a href="{% url 'edit_cryptocurrency' slug=cryptocurrency.slug %}">Edit me!</>
 {% endblock content %}
